@@ -44,11 +44,12 @@ loudness = st.slider('Ruido 🔊', -60, 0, -30, 1)
 speechiness = st.slider('Contenido hablado 🗣', 0.0, 1.0, 0.5, 0.1)
 valence = st.slider('Valencia 😄', 0.0, 1.0, 0.5, 0.1)
 tempo = st.slider('Tempo ⌛️', 0, 200, 100, 5)
+duration = st.slider('Duración en ms 🕑', 0, 500000, 120000, 1000)
 time_signature = st.selectbox('Compás 🎼', ['1', '3', '4', '5'])
 
 # Crear DataFrame de entrada
 datos = [[daceability, loudness, speechiness, valence, tempo, time_signature]]
-data = pd.DataFrame(datos, columns = ['daceability', 'loudness', 'speechiness', 'valence', 'tempo', 'time_signature'])
+data = pd.DataFrame(datos, columns = ['daceability', 'loudness', 'speechiness', 'valence', 'tempo', 'duration', 'time_signature'])
 
 # Reordenar columnas
 data_preparada = data.copy()
