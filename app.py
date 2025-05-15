@@ -6,7 +6,7 @@ import streamlit as st
 filename = 'RandomForest.pkl'
 modelRF, labelencoder, variables = pickle.load(open(filename, 'rb'))
 
-# Estilos personalizados tipo Spotify
+# Estilos personalizados en Streamlit
 st.set_page_config(page_title="Spotify Recommender", layout = "centered")
 
 # CSS para estilo Spotify
